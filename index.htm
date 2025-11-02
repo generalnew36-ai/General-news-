@@ -5,52 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>General News</title>
 
-<!-- SEO -->
+<!-- SEO & Google Verification -->
+<meta name="google-site-verification" content="CLoN0oOrqyJJaULFrxI_0uoR0izIiOYzh_tkm6yGeB8" />
 <meta name="description" content="General News - موقع إخباري عربي يقدم تغطية شاملة لأهم الأخبار السياسية، الاقتصادية، الرياضية، الصحية والتكنولوجية.">
 <meta name="keywords" content="أخبار, سياسة, اقتصاد, رياضة, صحة, تكنولوجيا, الشرق الأوسط, العالم">
 <meta name="robots" content="index, follow">
 <meta name="author" content="General News">
-<link rel="canonical" href="https://your-site.example/">
-
-<!-- Open Graph -->
-<meta property="og:site_name" content="General News">
-<meta property="og:title" content="General News">
-<meta property="og:description" content="تغطية شاملة لأهم الأخبار السياسية، الاقتصادية، الرياضية، الصحية والتكنولوجية.">
-<meta property="og:image" content="https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ar_AR">
-<meta property="og:url" content="https://your-site.example/">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="General News">
-<meta name="twitter:description" content="تغطية شاملة لأهم الأخبار العربية والعالمية.">
-<meta name="twitter:image" content="https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg">
-
-<!-- Structured Data JSON-LD for website -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsMediaOrganization",
-  "name": "General News",
-  "url": "https://your-site.example/",
-  "logo": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg",
-  "sameAs": [
-    "https://facebook.com",
-    "https://twitter.com",
-    "https://instagram.com",
-    "https://youtube.com",
-    "https://t.me"
-  ]
-}
-</script>
 
 <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
 
 <style>
-/* ===========================
-   CSS نفس الكود القديم
-=========================== */
 body {
   font-family: "Tahoma", sans-serif;
   background-color: #000;
@@ -61,7 +25,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
 header {
   display: flex;
   flex-direction: column;
@@ -70,7 +33,6 @@ header {
   background-color: #111;
   z-index: 1000;
 }
-
 .logo-wrapper {
   display: inline-block;
   padding: 5px;
@@ -80,161 +42,88 @@ header {
   transition: transform 0.3s, box-shadow 0.3s;
   background-color: #000;
 }
-
-.logo-wrapper img {
-  width: 300px;
-  height: 50px;
-  display: block;
-}
-
-.logo-wrapper:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #00bfff;
-}
-
+.logo-wrapper img { width: 300px; height: 50px; display: block; }
+.logo-wrapper:hover { transform: scale(1.05); box-shadow: 0 0 15px #00bfff; }
 @keyframes colorBorder {
-  0% { border-color: #000000; }
-  33% { border-color: #000000; }
-  66% { border-color: #000000; }
-  100% { border-color: #CB1229; }
+  0%,33%,66%{ border-color:#000; } 100% { border-color:#CB1229; }
 }
-
-header hr {
-  width: 100%;
-  border: 1px solid #333;
-  margin: 10px 0;
-}
-
-/* شريط التنقل */
+header hr { width:100%; border:1px solid #333; margin:10px 0; }
 .nav-container {
   position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: rgba(17, 17, 17, 0.95);
+  top:0;
+  z-index:999;
+  background-color: rgba(17,17,17,0.95);
   backdrop-filter: blur(6px);
-  border: 3px solid #666565;
-  border-radius: 15px;
-  padding: 8px 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  overflow-x: auto;
-  box-shadow: 0 0 15px #000000;
-  scrollbar-width: none;
+  border:3px solid #666565;
+  border-radius:15px;
+  padding:8px 10px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  overflow-x:auto;
 }
-.nav-container::-webkit-scrollbar { display: none; }
-
+.nav-container::-webkit-scrollbar { display:none; }
 .nav-item {
-  background-color: #222;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  font-size: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-  flex-shrink: 0;
+  background-color:#222;
+  color:#fff;
+  border:none;
+  padding:8px 16px;
+  font-size:15px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+  flex-shrink:0;
 }
-.nav-item.active {
-  background-color: #56565A;
-  color: #000;
-}
-.nav-item:hover {
-  background-color: #1B5DDA;
-  transform: scale(1.05);
-}
-
-/* أزرار السوشيال */
+.nav-item.active { background-color:#56565A; color:#000; }
+.nav-item:hover { background-color:#1B5DDA; transform:scale(1.05); }
 .social-icon-frame {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  margin-left: 5px;
-  margin-right: 5px;
-  border: 3px solid #205CFF;
-  border-radius: 50%;
-  background-color: #000000;
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-  cursor: pointer;
-  flex-shrink: 0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;height:40px;
+  margin:0 5px;
+  border:3px solid #205CFF;
+  border-radius:50%;
+  background-color:#000;
+  cursor:pointer;
+  transition:0.3s;
+  flex-shrink:0;
 }
-.social-icon-frame img {
-  width: 18px;
-  height: 18px;
-}
-.social-icon-frame:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #000000;
-  border-color: #000000;
-}
-
-/* المقالات */
+.social-icon-frame img { width:18px;height:18px; }
+.social-icon-frame:hover { transform:scale(1.2); box-shadow:0 0 10px #000; border-color:#000; }
 main {
-  flex: 1;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 15px;
+  flex:1;
+  padding:10px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(350px,1fr));
+  gap:15px;
 }
-
 .article {
-  background-color: #111111;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 0 10px #222;
+  background-color:#111;
+  border-radius:10px;
+  padding:15px;
+  box-shadow:0 0 10px #222;
+  display:block;
 }
-
-.article h3 {
-  color: #1241C1;
-  margin: 10px 0 5px;
-  font-size: 18px;
-}
-
-.article p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #ccc;
-}
-
-.meta-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.date {
-  font-size: 12px;
-  color: #aaa;
-}
-
+.article h3 { color:#1241C1; margin:10px 0 5px; font-size:18px; }
+.article p { font-size:14px; line-height:1.6; color:#ccc; }
+.meta-row { display:flex; justify-content:space-between; align-items:center; margin-top:10px; }
+.date { font-size:12px; color:#aaa; }
 .share-btn {
-  background-color: #222;
-  border: none;
-  color: #978F8F;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  border-radius: 10px;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.3s;
+  background-color:#222;
+  border:none;
+  color:#978F8F;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  border-radius:10px;
+  padding:5px 10px;
+  cursor:pointer;
+  font-size:14px;
+  transition:0.3s;
 }
-.share-btn:hover {
-  background-color: #333;
-}
-
-/* إطار الإعلان */
-.ad-frame {
-  margin-top: 10px;
-  text-align: center;
-  border: 1px solid red;
-  border-radius: 10px;
-  padding: 5px;
-}
+.share-btn:hover { background-color:#333; }
+.ad-frame { margin-top:10px; text-align:center; border:1px solid red; border-radius:10px; padding:5px; }
 </style>
 </head>
 
@@ -247,15 +136,17 @@ main {
 </header>
 
 <div class="nav-container">
-  <button class="nav-item active" onclick="showSection('all', this)">الكل</button>
-  <button class="nav-item" onclick="showSection('politics', this)">السياسة</button>
-  <button class="nav-item" onclick="showSection('economy', this)">الاقتصاد</button>
-  <button class="nav-item" onclick="showSection('tech', this)">التكنولوجيا</button>
-  <button class="nav-item" onclick="showSection('sports', this)">الرياضة</button>
-  <button class="nav-item" onclick="showSection('health', this)">الصحة</button>
-  <button class="nav-item" onclick="showSection('science', this)">العلوم</button>
-  <button class="nav-item" onclick="showSection('entertainment', this)">الترفيه</button>
+  <!-- أقسام الموقع -->
+  <button class="nav-item active" onclick="filterCategory('all', this)">الكل</button>
+  <button class="nav-item" onclick="filterCategory('politics', this)">السياسة</button>
+  <button class="nav-item" onclick="filterCategory('economy', this)">الاقتصاد</button>
+  <button class="nav-item" onclick="filterCategory('tech', this)">التكنولوجيا</button>
+  <button class="nav-item" onclick="filterCategory('sports', this)">الرياضة</button>
+  <button class="nav-item" onclick="filterCategory('health', this)">الصحة</button>
+  <button class="nav-item" onclick="filterCategory('science', this)">العلوم</button>
+  <button class="nav-item" onclick="filterCategory('entertainment', this)">الترفيه</button>
 
+  <!-- أزرار التواصل الاجتماعي -->
   <a href="https://facebook.com" target="_blank" class="social-icon-frame"><img src="https://i.postimg.cc/tTmWSDkN/Screenshot-20251031-211935-4.jpg" alt="Facebook"></a>
   <a href="https://twitter.com" target="_blank" class="social-icon-frame"><img src="https://i.postimg.cc/X7DFn26k/Screenshot-20251031-202646-2.jpg" alt="Twitter"></a>
   <a href="https://youtube.com" target="_blank" class="social-icon-frame"><img src="https://i.postimg.cc/1z78sXFs/Screenshot-20251031-211935-3.jpg" alt="YouTube"></a>
@@ -264,1377 +155,175 @@ main {
 </div>
 
 <main id="content">
-  <!-- المقالات كاملة كما أرسلتها (يمكنك نسخ جميع div.article هنا بنفس الترتيب) -->
+  <!-- مثال لمقالات -->
+  <div class="article politics">
+    <h3>غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس</h3>
+    <p>تواصل العمليات الإسرائيلية في خان يونس، مع رفع الأنقاض والبحث عن جثث الرهائن...</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+
+  <div class="article economy">
+    <h3>ارتفاع أسعار النفط وتأثيرها على الاقتصاد العالمي</h3>
+    <p>شهدت أسعار النفط ارتفاعًا ملحوظًا، مما أثّر على مؤشرات الاقتصاد العالمي وأسواق المال...</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('ارتفاع أسعار النفط وتأثيرها على الاقتصاد العالمي')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+
+  <div class="article tech">
+    <h3>تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في الذكاء الاصطناعي</h3>
+    <p>أعلنت شركة xAI عن تحديثات متقدمة في نماذج الذكاء الاصطناعي...</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في الذكاء الاصطناعي')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+
+  <div class="article sports">
+    <h3>كرة القدم: فوز المنتخب السعودي في تصفيات كأس العالم</h3>
+    <p>حقق المنتخب السعودي فوزًا ثمينًا في تصفيات كأس العالم...</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('كرة القدم: فوز المنتخب السعودي في تصفيات كأس العالم')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
 </main>
 
-<!-- Structured Data لكل مقال -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "NewsArticle",
-      "headline": "أخبار الولايات المتحدة: شلل الحكومة الفيدرالية",
-      "image": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg",
-      "datePublished": "2025-11-01",
-      "author": {
-        "@type": "Organization",
-        "name": "General News"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "General News",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg"
-        }
-      },
-      "description": "يستمر شلل الحكومة الفيدرالية بعد فشل الكونغرس في تمرير ميزانية، مما يهدد بإغلاق خدمات حكومية وتأخير رواتب الملايين."
-    }
-    /* يمكنك تكرار هذا الكائن لكل مقال مع تغيير headline, datePublished, description */
-  ]
-}
-</script>
-
 <script>
-function showSection(section, btn) {
+function filterCategory(category, btn) {
   document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.article').forEach(article => {
-    article.style.display = (section === 'all' || article.classList.contains(section)) ? 'block' : 'none';
+  const articles = document.querySelectorAll('.article');
+  articles.forEach(a => {
+    if(category === 'all') a.style.display='block';
+    else a.style.display = a.classList.contains(category) ? 'block' : 'none';
   });
 }
 
 function shareArticle(title) {
-  const url = window.location.href;
-  if (navigator.share) {
-    navigator.share({
-      title: title,
-      text: "شاهد هذا المقال على موقع General News:",
-      url: url
-    });
-  } else {
-    alert("انسخ الرابط للمشاركة: " + url);
-  }
+  if(navigator.share){
+    navigator.share({title,text:title,url:window.location.href});
+  } else { alert('نسخ الرابط لمشاركته: ' + window.location.href); }
 }
 </script>
 </body>
-</html><div class="article politics">
-  <h3>غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس</h3>
-  <p>تواصل العمليات الإسرائيلية في خان يونس، مع رفع الأنقاض والبحث عن جثث الرهائن. 
-  أفادت تقارير بتوترات مستمرة في المنطقة، وسط دعوات دولية لوقف إطلاق النار.</p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس",
-  "image": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg",
-  "datePublished": "2025-11-02",
-  "author": {
-    "@type": "Organization",
-    "name": "General News"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "General News",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg"
-    }
-  },
-  "description": "تواصل العمليات الإسرائيلية في خان يونس، مع رفع الأنقاض والبحث عن جثث الرهائن. أفادت تقارير بتوترات مستمرة في المنطقة، وسط دعوات دولية لوقف إطلاق النار."
-}
-</script><div class="article politics">
-  <h3>الجزائر تدين هجوماً على الدوحة</h3>
-  <p>أدانت الجزائر "العدوان الصهيوني" على العاصمة القطرية، معبرة عن تضامن كامل مع قطر. 
-  الرئيس تبون استقبل أيضاً وزير الداخلية الإسباني لمناقشة التعاون الأمني.</p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('الجزائر تدين هجوماً على الدوحة')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "الجزائر تدين هجوماً على الدوحة",
-  "image": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg",
-  "datePublished": "2025-11-02",
-  "author": {
-    "@type": "Organization",
-    "name": "General News"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "General News",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg"
-    }
-  },
-  "description": "أدانت الجزائر 'العدوان الصهيوني' على العاصمة القطرية، معبرة عن تضامن كامل مع قطر. الرئيس تبون استقبل أيضاً وزير الداخلية الإسباني لمناقشة التعاون الأمني."
-}
-</script><div class="article politics">
-  <h3>الانتخابات الأمريكية</h3>
-  <p>يتصدر التركيز الانتخابات الرئاسية القادمة، مع استطلاعات تشير إلى تنافس شديد بين المرشحين الرئيسيين. 
-  تغطية واسعة للتأثيرات على الشرق الأوسط.</p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('الانتخابات الأمريكية')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "الانتخابات الأمريكية",
-  "image": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg",
-  "datePublished": "2025-11-02",
-  "author": {
-    "@type": "Organization",
-    "name": "General News"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "General News",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg"
-    }
-  },
-  "description": "يتصدر التركيز الانتخابات الرئاسية القادمة، مع استطلاعات تشير إلى تنافس شديد بين المرشحين الرئيسيين. تغطية واسعة للتأثيرات على الشرق الأوسط."
-}
-</script><div class="article sports">
-  <h3>كرة القدم: فوز المنتخب السعودي في تصفيات كأس العالم</h3>
-  <p>حقق المنتخب السعودي فوزًا ثمينًا في تصفيات كأس العالم، مع إصابات مؤثرة في الدوري الإنجليزي الممتاز قد تؤثر على نتائج الأندية في الجولات القادمة.</p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('كرة القدم: فوز المنتخب السعودي في تصفيات كأس العالم')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SportsEvent",
-  "name": "كرة القدم: فوز المنتخب السعودي في تصفيات كأس العالم",
-  "startDate": "2025-11-02",
-  "location": {
-    "@type": "Place",
-    "name": "السعودية"
-  },
-  "description": "حقق المنتخب السعودي فوزًا ثمينًا في تصفيات كأس العالم، مع إصابات مؤثرة في الدوري الإنجليزي الممتاز قد تؤثر على نتائج الأندية في الجولات القادمة.",
-  "performer": {
-    "@type": "SportsTeam",
-    "name": "المنتخب السعودي"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "General News",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg"
-    }
-  }
-}
-</script><div class="article technology">
-  <h3>تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في نماذج الذكاء الاصطناعي</h3>
-  <p>أعلنت شركة <strong>xAI</strong> عن إطلاق تحديثات متقدمة في نماذج الذكاء الاصطناعي، مع تركيز خاص على دعم التطبيقات العربية وتحسين دقة الفهم اللغوي والسياقي، وفتح آفاق جديدة لاستخدام الذكاء الاصطناعي في التعليم والإعلام والخدمات الرقمية.</p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في نماذج الذكاء الاصطناعي')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في نماذج الذكاء الاصطناعي",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": {
-    "@type": "Organization",
-    "name": "General News"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "General News",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg"
-    }
-  },
-  "description": "أعلنت شركة xAI عن إطلاق تحديثات متقدمة في نماذج الذكاء الاصطناعي، مع تركيز خاص على دعم التطبيقات العربية وتحسين دقة الفهم اللغوي والسياقي، وفتح آفاق جديدة لاستخدام الذكاء الاصطناعي في التعليم والإعلام والخدمات الرقمية."
-}
-</script><div class="article politics">
-  <h3>غزة والضفة الغربية: اتهامات للاحتلال الإسرائيلي بعرقلة المساعدات الإنسانية</h3>
-  <p>تواجه غزة والضفة الغربية عمليات اقتحام مستمرة من الاحتلال الإسرائيلي، مع عرقلة المساعدات الإنسانية، وسط تغطية مباشرة للوضع الميداني والتوترات المستمرة بين الأطراف المعنية.</p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('غزة والضفة الغربية: اتهامات للاحتلال الإسرائيلي بعرقلة المساعدات الإنسانية')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "غزة والضفة الغربية: اتهامات للاحتلال الإسرائيلي بعرقلة المساعدات الإنسانية",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": {
-    "@type": "Organization",
-    "name": "General News"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "General News",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg"
-    }
-  },
-  "description": "تواجه غزة والضفة الغربية عمليات اقتحام مستمرة من الاحتلال الإسرائيلي، مع عرقلة المساعدات الإنسانية، وسط تغطية مباشرة للوضع الميداني والتوترات المستمرة بين الأطراف المعنية."
-}
-</script><div class="article politics">
-  <h3>السودان: تطورات متعلقة بقادة مثل حميدتي والبرهان في سياق التوترات السياسية</h3>
-  <p>تشهد السودان توترات سياسية متصاعدة، مع تطورات حول قادة مثل <strong>حميدتي</strong> و<strong>البرهان</strong>، وسط تحركات سياسية وميدانية تؤثر على الاستقرار والأوضاع الأمنية في البلاد.</p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('السودان: تطورات متعلقة بقادة مثل حميدتي والبرهان في سياق التوترات السياسية')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "السودان: تطورات متعلقة بقادة مثل حميدتي والبرهان في سياق التوترات السياسية",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": {
-    "@type": "Organization",
-    "name": "General News"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "General News",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg"
-    }
-  },
-  "description": "تشهد السودان توترات سياسية متصاعدة، مع تطورات حول قادة مثل حميدتي والبرهان، وسط تحركات سياسية وميدانية تؤثر على الاستقرار والأوضاع الأمنية في البلاد."
-}
-</script><div class="article weather">
-  <h3>السعودية - الطقس: سحب رعدية ممطرة ورياح نشطة في جازان، عسير، وتبوك</h3>
-  <p>تشهد مناطق <strong>جازان</strong>، <strong>عسير</strong>، و<strong>تبوك</strong> نشاطًا للسحب الرعدية الممطرة المصحوبة برياح نشطة، فيما تسجل منطقتا <strong>مكة المكرمة</strong> و<strong>المدينة المنورة</strong> رياحًا مثيرة للأتربة والغبار تقلل من مدى الرؤية الأفقية. كما يُتوقع تشكل <strong>ضباب صباحي</strong> على بعض محافظات المنطقة الشرقية، مما يستدعي الحذر أثناء القيادة.</p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('السعودية - الطقس: سحب رعدية ممطرة ورياح نشطة في جازان، عسير، وتبوك')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "السعودية - الطقس: سحب رعدية ممطرة ورياح نشطة في جازان، عسير، وتبوك",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": {
-    "@type": "Organization",
-    "name": "General News"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "General News",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg"
-    }
-  },
-  "description": "تشهد مناطق جازان، عسير، وتبوك نشاطًا للسحب الرعدية الممطرة المصحوبة برياح نشطة، مع رياح مثيرة للأتربة في مكة والمدينة، وضباب صباحي في الشرقية."
-}
-</script><div class="article politics">
-  <h3>إثيوبيا ومصر: مخاوف مصرية من تأثير سد "كويشا" الإثيوبي على الموارد المائية</h3>
-  <p>أعربت الحكومة المصرية عن مخاوفها بشأن تأثير سد "كويشا" الإثيوبي على الموارد المائية في مصر، مع التركيز على احتمال تراجع حصتها من مياه نهر النيل. ويأتي ذلك وسط مفاوضات دبلوماسية مستمرة بين البلدين لمناقشة السد والتأثيرات المحتملة على الأمن المائي.</p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('إثيوبيا ومصر: مخاوف مصرية من تأثير سد \"كويشا\" الإثيوبي على الموارد المائية')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "إثيوبيا ومصر: مخاوف مصرية من تأثير سد \"كويشا\" الإثيوبي على الموارد المائية",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": {
-    "@type": "Organization",
-    "name": "General News"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "General News",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg"
-    }
-  },
-  "description": "مخاوف مصرية من تأثير سد \"كويشا\" الإثيوبي على الموارد المائية، مع استمرار المفاوضات الدبلوماسية بين مصر وإثيوبيا حول الأمن المائي."
-}
-</script><!-- مقال الدوري الألماني -->
-<div class="article sports">
-  <h3>الدوري الألماني: فوز بوروسيا دورتموند على هايدنهايم رغم طرد لاعب</h3>
-  <p>تمكن بوروسيا دورتموند من الفوز على هايدنهايم في مباراة مثيرة، رغم طرد أحد لاعبيه خلال اللقاء، مما عزز موقع الفريق في صدارة الدوري الألماني لكرة القدم. وقد شهدت المباراة لحظات حماسية وأداءً جماعيًا قويًا للفريق الأصفر والأسود.</p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('الدوري الألماني: فوز بوروسيا دورتموند على هايدنهايم رغم طرد لاعب')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD الدوري الألماني -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SportsEvent",
-  "name": "الدوري الألماني: بوروسيا دورتموند ضد هايدنهايم",
-  "startDate": "2025-11-02",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "location": {
-    "@type": "Place",
-    "name": "ألمانيا"
-  },
-  "performer": [
-    {
-      "@type": "SportsTeam",
-      "name": "بوروسيا دورتموند"
-    },
-    {
-      "@type": "SportsTeam",
-      "name": "هايدنهايم"
-    }
-  ],
-  "description": "بوروسيا دورتموند يفوز على هايدنهايم رغم طرد لاعب، مما يعزز موقعه في صدارة الدوري الألماني."
-}
-</script>
-
-<!-- مقال دوري أبطال أوروبا -->
-<div class="article sports">
-  <h3>دوري أبطال أوروبا: إشادة بأداء سني مايولو واهتمام باريس سان جيرمان</h3>
-  <p>أشاد الخبراء بأداء اللاعب سني مايولو البالغ من العمر 19 عاماً خلال نهائي دوري أبطال أوروبا 2025. وحرص نادي باريس سان جيرمان على تمديد عقد اللاعب قبل عام 2027، في ظل اهتمام من أندية كبرى مثل مانشستر سيتي وتشيلسي، وسط توقعات بمستقبل واعد للنجم الشاب.</p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('دوري أبطال أوروبا: إشادة بأداء سني مايولو واهتمام باريس سان جيرمان')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD دوري أبطال أوروبا -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SportsEvent",
-  "name": "دوري أبطال أوروبا 2025",
-  "startDate": "2025-11-02",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "location": {
-    "@type": "Place",
-    "name": "أوروبا"
-  },
-  "performer": [
-    {
-      "@type": "Person",
-      "name": "سني مايولو"
-    },
-    {
-      "@type": "SportsTeam",
-      "name": "باريس سان جيرمان"
-    }
-  ],
-  "description": "إشادة بأداء سني مايولو (19 عاماً) في نهائي دوري أبطال أوروبا 2025، مع حرص باريس سان جيرمان على تمديد عقده قبل 2027 وسط اهتمام من مانشستر سيتي وتشيلسي."
-
-</script><!-- مقال كرة اليد ورياضات الهواة -->
-<div class="article sports">
-  <h3>كرة اليد ورياضات الهواة: تألق مصر وحماس اللاعبين</h3>
-  <p>
-    كرة اليد: تأهل منتخب مصر إلى نهائي كأس العالم للناشئين بعد إطاحة إسبانيا، 
-    مسجلاً صفحة ذهبية في التاريخ الرياضي المصري.
-  </p>
-  <p>
-    رياضات هواة: كرة قدم الهواة في محافظة صبيا، مع فيديوهات تظهر حماس اللاعبين والتنافس بين الفرق المحلية.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('كرة اليد ورياضات الهواة: تألق مصر وحماس اللاعبين')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "كرة اليد ورياضات الهواة: تألق مصر وحماس اللاعبين",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "رياضة",
-  "keywords": "كرة اليد, مصر, كأس العالم للناشئين, إسبانيا, الرياضات الهواة, كرة قدم الهواة, محافظة صبيا",
-  "description": "تغطية لتأهل منتخب مصر في كرة اليد للنهائي، ونشاط رياضات الهواة في محافظة صبيا مع لقطات حماسية للاعبين."
-}
-</script><!-- مقال كرة القدم النسائية -->
-<div class="article sports">
-  <h3>ابتكار في كرة القدم النسائية: تكتيكات باستخدام ChatGPT</h3>
-  <p>
-    استخدمت المدربة لورا هارفي لفريق سياتل رين <strong>ChatGPT</strong> لتحديد تكتيكات الفريق، 
-    مما ساهم في رفع الفريق إلى المركز الرابع في دوري NWSL بعد موسم سيئ في 2024.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('ابتكار في كرة القدم النسائية: تكتيكات باستخدام ChatGPT')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "ابتكار في كرة القدم النسائية: تكتيكات باستخدام ChatGPT",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "رياضة",
-  "keywords": "كرة القدم النسائية, سياتل رين, لورا هارفي, ChatGPT, NWSL, تكتيكات الفريق",
-  "description": "استخدام المدربة لورا هارفي لتقنيات ChatGPT في كرة القدم النسائية أدى لتحسين أداء فريق سياتل رين والوصول إلى المركز الرابع في NWSL بعد موسم 2024."
-}
-</script><!-- مقال الاقتصاد: صندوق النقد الدولي -->
-<div class="article economy">
-  <h3>صندوق النقد الدولي (IMF): توقعات النمو العالمي 2025-2026</h3>
-  <p>
-    يتوقع <strong>صندوق النقد الدولي (IMF)</strong> نمواً عالمياً بنسبة 3.2% في 2025 و3.1% في 2026، 
-    مع تعديل صعودي للولايات المتحدة بفضل الاستثمارات في الذكاء الاصطناعي، 
-    يعوض الانخفاضات في مناطق أخرى. هذا يعكس تأثيراً متأخراً للتعريفات الجمركية بسبب التخزين المسبق للبضائع في 2025.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('صندوق النقد الدولي (IMF): توقعات النمو العالمي 2025-2026')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "صندوق النقد الدولي (IMF): توقعات النمو العالمي 2025-2026",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "اقتصاد",
-  "keywords": "صندوق النقد الدولي, IMF, النمو العالمي, الاقتصاد 2025, الاقتصاد 2026, الولايات المتحدة, الذكاء الاصطناعي, التعريفات الجمركية",
-  "description": "صندوق النقد الدولي يتوقع نمواً عالمياً بنسبة 3.2% في 2025 و3.1% في 2026، مع تعديل صعودي للولايات المتحدة بفضل استثمارات الذكاء الاصطناعي، وتعويض الانخفاضات في مناطق أخرى."
-}
-</script><!-- مقال الاقتصاد: منظمة التعاون الاقتصادي والتنمية (OECD) -->
-<div class="article economy">
-  <h3>منظمة التعاون الاقتصادي والتنمية (OECD): توقعات النمو والتضخم 2025-2026</h3>
-  <p>
-    تتوقع <strong>منظمة التعاون الاقتصادي والتنمية (OECD)</strong> تباطؤ النمو إلى 3.2% في 2025 و2.9% في 2026، 
-    مع انخفاض في الاستثمار والتجارة نتيجة التعريفات والسياسات غير المؤكدة. 
-    كما تشير التوقعات إلى انخفاض التضخم إلى 3.4% في 2025 و2.9% في 2026.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('منظمة التعاون الاقتصادي والتنمية (OECD): توقعات النمو والتضخم 2025-2026')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "منظمة التعاون الاقتصادي والتنمية (OECD): توقعات النمو والتضخم 2025-2026",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "اقتصاد",
-  "keywords": "OECD, منظمة التعاون الاقتصادي والتنمية, النمو الاقتصادي, التضخم, الاستثمار, التجارة, التعريفات, السياسات الاقتصادية, الاقتصاد 2025, الاقتصاد 2026",
-  "description": "منظمة التعاون الاقتصادي والتنمية تتوقع تباطؤ النمو إلى 3.2% في 2025 و2.9% في 2026، مع انخفاض الاستثمار والتجارة نتيجة التعريفات والسياسات غير المؤكدة، وتراجع التضخم إلى 3.4% و2.9%."
-}
-</script><!-- مقال الاقتصاد: البنك الدولي -->
-<div class="article economy">
-  <h3>البنك الدولي: توقعات النمو العالمي 2025-2027</h3>
-  <p>
-    توقع <strong>البنك الدولي</strong> تباطؤ النمو العالمي إلى 2.3% في 2025، 
-    مع انتعاش ضعيف في 2026-2027. وأشار البنك إلى مخاطر أكبر في حال تصاعدت الحواجز التجارية أو استمرار عدم اليقين السياسي في الأسواق العالمية.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('البنك الدولي: توقعات النمو العالمي 2025-2027')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "البنك الدولي: توقعات النمو العالمي 2025-2027",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "اقتصاد",
-  "keywords": "البنك الدولي, النمو العالمي, الاقتصاد 2025, الاقتصاد 2026, الاقتصاد 2027, الحواجز التجارية, المخاطر الاقتصادية, السياسة العالمية, النمو الاقتصادي",
-  "description": "البنك الدولي يتوقع تباطؤ النمو العالمي إلى 2.3% في 2025، مع انتعاش ضعيف في 2026-2027، ومخاطر أكبر إذا تصاعدت الحواجز التجارية أو استمر عدم اليقين السياسي."
-}
-</script><!-- مقال الاقتصاد: الولايات المتحدة -->
-<div class="article economy">
-  <h3>الولايات المتحدة: نمو مدعوم بالذكاء الاصطناعي وتعريفات تجارية</h3>
-  <p>
-    شهدت <strong>الولايات المتحدة</strong> نمواً مدعوماً بالاستثمار في <strong>الذكاء الاصطناعي</strong>، 
-    حيث شكل 46% من نمو الناتج المحلي الإجمالي في النصف الأول من 2025. 
-    إلا أن <strong>التعريفات الجمركية</strong> أثارت جدلاً قضائياً، 
-    حيث ستستمع المحكمة العليا للحجج حول شرعية بعض التعريفات في 5 نوفمبر 2025.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('الولايات المتحدة: نمو مدعوم بالذكاء الاصطناعي وتعريفات تجارية')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "الولايات المتحدة: نمو مدعوم بالذكاء الاصطناعي وتعريفات تجارية",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "اقتصاد",
-  "keywords": "الولايات المتحدة, الذكاء الاصطناعي, النمو الاقتصادي, الناتج المحلي الإجمالي, التعريفات الجمركية, المحكمة العليا, الاقتصاد 2025",
-  "description": "الولايات المتحدة تشهد نمواً مدعوماً بالذكاء الاصطناعي يشكل 46% من الناتج المحلي الإجمالي للنصف الأول من 2025، مع جدل حول التعريفات الجمركية أمام المحكمة العليا."
-}
-</script><!-- مقال التكنولوجيا: تأثير AI على الثقة العقلية -->
-<div class="article technology">
-  <h3>تأثير AI على الثقة العقلية: دراسة حديثة</h3>
-  <p>
-    كشفت <strong>دراسة حديثة</strong> أن استخدام أدوات <strong>الذكاء الاصطناعي (AI)</strong> 
-    يمنح شعوراً زائفاً بالثقة في القدرات المعرفية، 
-    مما قد يؤدي إلى مبالغة في تقدير الأداء واتخاذ قرارات غير دقيقة.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('تأثير AI على الثقة العقلية: دراسة حديثة')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "تأثير AI على الثقة العقلية: دراسة حديثة",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "تكنولوجيا",
-  "keywords": "AI, الذكاء الاصطناعي, الثقة العقلية, القدرات المعرفية, دراسة, الأداء",
-  "description": "دراسة حديثة تكشف أن استخدام أدوات الذكاء الاصطناعي يمنح شعوراً زائفاً بالثقة في القدرات المعرفية، مما قد يؤدي إلى مبالغة في تقدير الأداء."
-}
-</script><!-- مقال التكنولوجيا -->
-<div class="article tech">
-  <h3>نمو TSMC بنسبة 35%</h3>
-  <p>
-    رفعت شركة <strong>TSMC</strong> توقعات إيرادات 2025 إلى 35%، مدفوعة بالطلب على رقائق <strong>Nvidia</strong> للذكاء الاصطناعي، مما يعزز ثقة القطاع.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('نمو TSMC بنسبة 35%')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "نمو TSMC بنسبة 35%",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "تكنولوجيا",
-  "keywords": "TSMC, Nvidia, الذكاء الاصطناعي, إيرادات, قطاع التكنولوجيا, نمو, رقائق",
-  "description": "شركة TSMC ترفع توقعات إيرادات 2025 إلى 35% نتيجة الطلب على رقائق Nvidia للذكاء الاصطناعي، مما يعزز ثقة قطاع التكنولوجيا."
-}
-</script><!-- مقال التكنولوجيا: شراكة إنفيديا مع كوريا الجنوبية -->
-<div class="article tech">
-  <h3>إنفيديا تعلن شراكة موسعة مع الحكومة الكورية الجنوبية</h3>
-  <p>
-    أعلنت شركة <strong>إنفيديا</strong> عن شراكة موسعة مع الحكومة الكورية الجنوبية خلال قمة 
-    منتدى التعاون الاقتصادي لدول آسيا والمحيط الهادئ 2025، لتطوير البنية التحتية للذكاء الاصطناعي 
-    وقدراته الحوسبية في البلاد. هذا يأتي في ظل نمو الطلب على رقائق الـ AI.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('إنفيديا تعلن شراكة موسعة مع الحكومة الكورية الجنوبية')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "إنفيديا تعلن شراكة موسعة مع الحكومة الكورية الجنوبية",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "تكنولوجيا",
-  "keywords": "إنفيديا, كوريا الجنوبية, الذكاء الاصطناعي, AI, رقائق, شراكة, بنية تحتية, التكنولوجيا",
-  "description": "إنفيديا تعلن شراكة موسعة مع الحكومة الكورية الجنوبية لتطوير البنية التحتية للذكاء الاصطناعي وقدراته الحوسبية، وسط نمو الطلب على رقائق AI."
-}
-</script><!-- مقال التكنولوجيا: Adobe Max 2025 وأدوات الذكاء الاصطناعي -->
-<div class="article tech">
-  <h3>Adobe Max 2025: أدوات جديدة تعتمد على الذكاء الاصطناعي</h3>
-  <p>
-    خلال مؤتمر <strong>Adobe Max 2025</strong>، أطلقت الشركة موجة واسعة من الأدوات المعتمدة على 
-    <strong>الذكاء الاصطناعي</strong> لتحسين أداء برامجها مثل فوتوشوب، مما يساعد المصممين في 
-    الإبداع السريع والتلقائي.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('Adobe Max 2025: أدوات جديدة تعتمد على الذكاء الاصطناعي')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "Adobe Max 2025: أدوات جديدة تعتمد على الذكاء الاصطناعي",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "تكنولوجيا",
-  "keywords": "Adobe Max, فوتوشوب, الذكاء الاصطناعي, AI, أدوات التصميم, التكنولوجيا, المصممين",
-  "description": "خلال مؤتمر Adobe Max 2025، أطلقت الشركة أدوات جديدة تعتمد على الذكاء الاصطناعي لتحسين أداء برامجها مثل فوتوشوب، مما يسهل الإبداع السريع للمصممين."
-}
-</script><!-- مقال التكنولوجيا: TikTok والذكاء الاصطناعي -->
-<div class="article tech">
-  <h3>TikTok تعزز قدرات صُنّاع المحتوى بالذكاء الاصطناعي</h3>
-  <p>
-    أعلنت <strong>TikTok</strong> عن مجموعة أدوات جديدة مدعومة بالـ <strong>AI</strong> لتسهيل إنتاج المحتوى، 
-    مثل توليد الفيديوهات التلقائية وتحسين الإبداع، بهدف دعم المبدعين العالميين وتمكينهم من الوصول إلى جمهور أوسع.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('TikTok تعزز قدرات صُنّاع المحتوى بالذكاء الاصطناعي')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "TikTok تعزز قدرات صُنّاع المحتوى بالذكاء الاصطناعي",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "تكنولوجيا",
-  "keywords": "TikTok, الذكاء الاصطناعي, AI, صناع المحتوى, أدوات التصميم, الفيديوهات التلقائية, التكنولوجيا",
-  "description": "أعلنت TikTok عن أدوات جديدة مدعومة بالذكاء الاصطناعي لتسهيل إنتاج المحتوى، مثل توليد الفيديوهات التلقائية وتحسين الإبداع، لدعم المبدعين العالميين."
-}(((((()))))){}
-</script><!-- مقال الصحة: إطلاق منصة فوركيور في مصر -->
-<div class="article health">
-  <h3>وزارة الصحة المصرية تطلق المنصة الإلكترونية "فوركيور"</h3>
-  <p>
-    أعلنت <strong>وزارة الصحة والسكان المصرية</strong> إطلاق المنصة الإلكترونية الموحدة <strong>"فوركيور"</strong> 
-    في 10 نوفمبر 2025، خلال المؤتمر العالمي للصحة والتنمية والسكان. 
-    تغطي المنصة جميع مراحل الرحلة الطبية للسائحين، بما في ذلك التأشيرات والترتيبات اللوجستية، 
-    بهدف تعزيز السياحة الطبية في مصر وتحسين تجربة المرضى والزوار.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('وزارة الصحة المصرية تطلق المنصة الإلكترونية فوركيور')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "وزارة الصحة المصرية تطلق المنصة الإلكترونية فوركيور",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "صحة",
-  "keywords": "الصحة, مصر, وزارة الصحة, فوركيور, منصة إلكترونية, السياحة الطبية, الرحلة الطبية, تنمية",
-  "description": "أطلقت وزارة الصحة المصرية المنصة الإلكترونية 'فوركيور' لتغطية جميع مراحل الرحلة الطبية للسائحين وتعزيز السياحة الطبية في مصر."
-}
-</script><!-- مقال الصحة: وفيات العاملين الصحيين في لبنان -->
-<div class="article health">
-  <h3>الصحة العالمية: ارتفاع وفيات العاملين الصحيين والمرضى في لبنان</h3>
-  <p>
-    سجلت <strong>منظمة الصحة العالمية</strong> وفيات أكبر نسبياً للعاملين الصحيين والمرضى في <strong>لبنان</strong> 
-    منذ أكتوبر 2023 حتى نوفمبر 2024، مقارنة بغزة وأوكرانيا، بسبب النزاعات المستمرة، 
-    مما يبرز الحاجة إلى دعم أكبر للقطاع الصحي وتحسين الحماية والخدمات الطبية في المناطق المتأثرة.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('الصحة العالمية: ارتفاع وفيات العاملين الصحيين والمرضى في لبنان')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "الصحة العالمية: ارتفاع وفيات العاملين الصحيين والمرضى في لبنان",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "صحة",
-  "keywords": "الصحة, منظمة الصحة العالمية, لبنان, العاملين الصحيين, الوفيات, النزاعات, غزة, أوكرانيا, دعم صحي",
-  "description": "سجلت منظمة الصحة العالمية وفيات أكبر نسبياً للعاملين الصحيين والمرضى في لبنان منذ أكتوبر 2023 حتى نوفمبر 2024، مقارنة بغزة وأوكرانيا، بسبب النزاعات المستمرة، مما يبرز الحاجة إلى دعم أكبر للقطاع الصحي."
-}
-</script><!-- مقال الصحة: تأثير الفشل الاجتماعي ووسائل التواصل على المراهقين -->
-<div class="article health">
-  <h3>الصحة النفسية للمراهقين: الفشل الاجتماعي ووسائل التواصل</h3>
-  <p>
-    كشفت <strong>دراسة جديدة</strong> أن <strong>الفشل الاجتماعي</strong> هو أقوى عامل يؤثر بالسلب على 
-    <strong>الصحة النفسية للمراهقين</strong> على المدى القريب والبعيد، مع تحذيرات من مخاطر الإفراط 
-    في <strong>وسائل التواصل الاجتماعي</strong> التي تزيد من القلق وتضعف التركيز.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('الصحة النفسية للمراهقين: الفشل الاجتماعي ووسائل التواصل')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "الصحة النفسية للمراهقين: الفشل الاجتماعي ووسائل التواصل",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "صحة",
-  "keywords": "الصحة النفسية, المراهقين, الفشل الاجتماعي, وسائل التواصل الاجتماعي, القلق, التركيز, دراسة",
-  "description": "دراسة جديدة تكشف أن الفشل الاجتماعي هو أقوى عامل يؤثر بالسلب على الصحة النفسية للمراهقين، مع تحذيرات من مخاطر الإفراط في وسائل التواصل الاجتماعي التي تزيد القلق وتضعف التركيز."
-}
-</script><!-- مقال الصحة: مؤتمرات الرعاية الصحية العالمية -->
-<div class="article health">
-  <h3>الرعاية الصحية العالمية: تحضيرات لمؤتمرات كبرى</h3>
-  <p>
-    أعلنت <strong>الجهات المعنية بالرعاية الصحية العالمية</strong> عن تحضيرات لمؤتمرات كبرى، 
-    منها <strong>قمة الابتكار في الرعاية الصحية</strong> في قطر خلال 13-14 نوفمبر، 
-    و<strong>مؤتمر السكان في مصر</strong> الذي يركز على تطبيقات <strong>الذكاء الاصطناعي في الصحة</strong>.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('الرعاية الصحية العالمية: تحضيرات لمؤتمرات كبرى')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "الرعاية الصحية العالمية: تحضيرات لمؤتمرات كبرى",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "صحة",
-  "keywords": "الرعاية الصحية, مؤتمرات, الابتكار, الصحة, الذكاء الاصطناعي, مصر, قطر",
-  "description": "تحضيرات لمؤتمرات كبرى في مجال الرعاية الصحية، مثل قمة الابتكار في قطر ومؤتمر السكان في مصر الذي يركز على الذكاء الاصطناعي في الصحة."
-}
-</script><!-- مقال الصحة: الصحة النفسية والتواصل الاجتماعي -->
-<div class="article health">
-  <h3>الصحة النفسية: مخاطر الفشل الاجتماعي والتواصل الاجتماعي</h3>
-  <p>
-    كشفت <strong>دراسة حديثة</strong> أن الفشل الاجتماعي هو أقوى عامل يؤثر بالسلب على الصحة النفسية للمراهقين على المدى القريب والبعيد. 
-    كما تشير النتائج إلى مخاطر الإفراط في استخدام <strong>وسائل التواصل الاجتماعي</strong>، 
-    مع توصيات بالحد الأقصى لساعتين يومياً للحد من القلق وضعف التركيز.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('الصحة النفسية: مخاطر الفشل الاجتماعي والتواصل الاجتماعي')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "الصحة النفسية: مخاطر الفشل الاجتماعي والتواصل الاجتماعي",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "صحة",
-  "keywords": "الصحة النفسية, الفشل الاجتماعي, التواصل الاجتماعي, القلق, التركيز, المراهقين, دراسة",
-  "description": "دراسة حديثة تكشف تأثير الفشل الاجتماعي والإفراط في وسائل التواصل الاجتماعي على الصحة النفسية للمراهقين، مع توصيات بالحد الأقصى ساعتين يومياً."
-}}}}}{{}}
-</script><!-- مقال العلوم: اكتشاف كوكب TOI-715 b -->
-<div class="article science">
-  <h3>ناسا تكتشف كوكب TOI-715 b: مرشح للحياة خارج الأرض</h3>
-  <p>
-    أعلنت وكالة <strong>ناسا</strong> اكتشاف كوكب خارجي <strong>TOI-715 b</strong>، يبعد 137 سنة ضوئية، 
-    ويغطيه <strong>محيطات ماء سائلة</strong>. يُعتبر هذا الكوكب "أفضل مرشح حتى الآن" للحياة خارج الأرض. 
-    الكوكب أكبر من الأرض بنسبة 1.5 مرة، ويدور في المنطقة الصالحة للحياة حول نجم قزم أحمر.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('ناسا تكتشف كوكب TOI-715 b: مرشح للحياة خارج الأرض')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "ناسا تكتشف كوكب TOI-715 b: مرشح للحياة خارج الأرض",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "علوم",
-  "keywords": "ناسا, اكتشاف كوكب, TOI-715 b, الحياة خارج الأرض, محيطات ماء, المنطقة الصالحة للحياة, الفضاء, الكواكب الخارجية",
-  "description": "وكالة ناسا تعلن اكتشاف كوكب TOI-715 b، أكبر من الأرض بنسبة 1.5 مرة ومغطى بمحيطات ماء، ويُعتبر أفضل مرشح حتى الآن للحياة خارج الأرض."
-}
-</script><!-- مقال العلوم: نجاح مفاعل EAST الصيني -->
-<div class="article science">
-  <h3>الصين تحقق اندماج نووي مستمر في مفاعل EAST "الشمس الاصطناعية"</h3>
-  <p>
-    نجح <strong>مفاعل EAST الصيني</strong>، المعروف بـ "الشمس الاصطناعية"، في الحفاظ على <strong>اندماج نووي مستمر</strong> لأكثر من 1000 ثانية عند درجة حرارة 100 مليون درجة مئوية. 
-    تُعد هذه خطوة كبرى نحو <strong>طاقة نظيفة غير محدودة</strong>. 
-    <em>(أعلن في 1 نوفمبر 2025، معهد الفيزياء البلازمية الصيني)</em>
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 1 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('الصين تحقق اندماج نووي مستمر في مفاعل EAST')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "الصين تحقق اندماج نووي مستمر في مفاعل EAST 'الشمس الاصطناعية'",
-  "datePublished": "2025-11-01",
-  "dateModified": "2025-11-01",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "علوم",
-  "keywords": "اندماج نووي, مفاعل EAST, الشمس الاصطناعية, الصين, طاقة نظيفة, فيزياء البلازما, الطاقة المستقبلية",
-  "description": "نجح مفاعل EAST الصيني في الحفاظ على اندماج نووي مستمر لأكثر من 1000 ثانية عند درجة حرارة 100 مليون درجة مئوية، ما يمثل خطوة مهمة نحو طاقة نظيفة غير محدودة."
-}
-</script><!-- مقال العلوم: اكتشاف بقايا بشرية في جبل إيغود -->
-<div class="article science">
-  <h3>اكتشاف بقايا بشرية عمرها 315,000 سنة في كهف جبل إيغود</h3>
-  <p>
-    عُثر في <strong>كهف جبل إيغود</strong> على <strong>بقايا بشرية تعود لـ 315,000 سنة</strong>، 
-    أقدم من هيكل "لوسي" بـ 100,000 سنة، مما يؤكد أن <strong>الإنسان العاقل نشأ في شمال إفريقيا</strong> وليس شرقها فقط.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('اكتشاف بقايا بشرية عمرها 315,000 سنة في كهف جبل إيغود')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "اكتشاف بقايا بشرية عمرها 315,000 سنة في كهف جبل إيغود",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "علوم",
-  "keywords": "الإنسان العاقل, جبل إيغود, آثار بشرية, شمال إفريقيا, علم الإنسان القديم, لوسي, تطور الإنسان",
-  "description": "تم اكتشاف بقايا بشرية عمرها 315,000 سنة في كهف جبل إيغود، أقدم من هيكل 'لوسي' بـ 100,000 سنة، مؤكداً أن الإنسان العاقل نشأ في شمال إفريقيا."
-}
-</script><!-- مقال الترفيه: نمو صناعة الترفيه عالميًا -->
-<div class="article entertainment">
-  <h3>كشف تقرير PwC عن نمو صناعة الترفيه عالميًا</h3>
-  <p>
-    كشف تقرير شركة <strong>PwC</strong> عن تحقيق <strong>صناعة الترفيه</strong> نمواً قوياً، 
-    مدفوعاً بالمحتوى الرقمي والتدفقات، ليصل حجمها إلى <strong>3.4 تريليون دولار بحلول 2028</strong>. 
-    في الشرق الأوسط، يبرز الدور الكبير للسعودية والإمارات في الفعاليات الحية والمنصات الرقمية.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('كشف تقرير PwC عن نمو صناعة الترفيه عالميًا')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "كشف تقرير PwC عن نمو صناعة الترفيه عالميًا",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "ترفيه",
-  "keywords": "PwC, صناعة الترفيه, المحتوى الرقمي, المنصات الرقمية, الفعاليات الحية, الشرق الأوسط, السعودية, الإمارات",
-  "description": "كشف تقرير PwC عن نمو صناعة الترفيه عالمياً، مدفوعاً بالمحتوى الرقمي والتدفقات، مع دور بارز للسعودية والإمارات في الشرق الأوسط."
-}
-</script><!-- مقال الترفيه: نشاط السعودية في الفعاليات الترفيهية -->
-<div class="article entertainment">
-  <h3>السعودية تسجل 76.9 مليون زائر للفعاليات الترفيهية في الربع الثالث 2024</h3>
-  <p>
-    سجلت <strong>المملكة العربية السعودية</strong> إنجازاً باستقطاب <strong>76.9 مليون زائر</strong> لـ536 فعالية ترفيهية في الربع الثالث من 2024، بقيادة <strong>موسم الرياض</strong> الذي جذب 19 مليون زائر. 
-    أصدرت الهيئة العامة للترفيه <strong>1827 ترخيصاً جديداً</strong>، بزيادة 5.7% مقارنة بالفترة السابقة.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 2 نوفمبر 2025</div>
-    <button class="share-btn" onclick="shareArticle('السعودية تسجل 76.9 مليون زائر للفعاليات الترفيهية في الربع الثالث 2024')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "السعودية تسجل 76.9 مليون زائر للفعاليات الترفيهية في الربع الثالث 2024",
-  "datePublished": "2025-11-02",
-  "dateModified": "2025-11-02",
-  "author": { "@type": "Person", "name": "General News" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "ترفيه",
-  "keywords": "السعودية, فعاليات ترفيهية, موسم الرياض, الهيئة العامة للترفيه, زوار, نمو, الترفيه في الشرق الأوسط",
-  "description": "سجلت السعودية 76.9 مليون زائر للفعاليات الترفيهية في الربع الثالث 2024، بقيادة موسم الرياض، مع إصدار 1827 ترخيصاً جديداً بزيادة 5.7%."
-}
-</script><!-- مقال الترفيه: الموسم السينمائي المصري يوليو 2025 -->
-<div class="article entertainment">
-  <h3>موسم سينمائي مصري حار في يوليو 2025</h3>
-  <p>
-    يشهد يوليو 2025 موسمًا سينمائيًا حارًا في مصر، مع فيلم <strong>"درويش"</strong> بطولة <strong>عمرو يوسف</strong>، و<strong>"الشاطر"</strong> الذي يجمع نجوماً كباراً، إلى جانب <strong>"أحمد وأحمد"</strong> الذي يعد من أكثر الأعمال المنتظرة بقصته المشوقة والإنتاج الضخم.
-  </p>
-
-  <div class="meta-row">
-    <div class="date">🗓️ 10 يوليو 2025</div>
-    <button class="share-btn" onclick="shareArticle('موسم سينمائي مصري حار في يوليو 2025')">
-      <i class="fi fi-ss-share"></i> مشاركة
-    </button>
-  </div>
-
-  <div class="ad-frame">
-    <iframe data-aa='' src='//ad.a-ads.com//?size=320x50' 
-            style='border:0;width:320px;height:50px;display:block;margin:auto;'></iframe>
-  </div>
-</div>
-
-<!-- Structured Data JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "موسم سينمائي مصري حار في يوليو 2025",
-  "datePublished": "2025-07-10",
-  "dateModified": "2025-07-10",
-  "author": { "@type": "Person", "name": "Scoop Empire" },
-  "publisher": { 
-    "@type": "Organization", 
-    "name": "General News", 
-    "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" } 
-  },
-  "articleSection": "ترفيه",
-  "keywords": "سينما مصرية, يوليو 2025, درويش, عمرو يوسف, الشاطر, أحمد وأحمد, موسم سينمائي, الترفيه",
-  "description": "يشهد يوليو 2025 موسمًا سينمائيًا حارًا في مصر مع أفلام درويش، الشاطر وأحمد وأحمد، بمشاركة نجوم كبار وإنتاج ضخم."
-}
-</script>
+</html><main id="content">
+  <!-- السياسة -->
+  <div class="article politics">
+    <h3>غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس</h3>
+    <p>تواصل العمليات الإسرائيلية في خان يونس، مع رفع الأنقاض والبحث عن جثث الرهائن. 
+    أفادت تقارير بتوترات مستمرة في المنطقة، وسط دعوات دولية لوقف إطلاق النار.</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+
+  <div class="article politics">
+    <h3>الجزائر تدين هجوماً على الدوحة</h3>
+    <p>أدانت الجزائر "العدوان الصهيوني" على العاصمة القطرية، معبرة عن تضامن كامل مع قطر. 
+    الرئيس تبون استقبل أيضاً وزير الداخلية الإسباني لمناقشة التعاون الأمني.</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('الجزائر تدين هجوماً على الدوحة')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+
+  <div class="article politics">
+    <h3>الانتخابات الأمريكية</h3>
+    <p>يتصدر التركيز الانتخابات الرئاسية القادمة، مع استطلاعات تشير إلى تنافس شديد بين المرشحين الرئيسيين. 
+    تغطية واسعة للتأثيرات على الشرق الأوسط.</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('الانتخابات الأمريكية')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+
+  <div class="article politics">
+    <h3>غزة والضفة الغربية: اتهامات للاحتلال الإسرائيلي بعرقلة المساعدات الإنسانية</h3>
+    <p>تواجه غزة والضفة الغربية عمليات اقتحام مستمرة من الاحتلال الإسرائيلي، مع عرقلة المساعدات الإنسانية، وسط تغطية مباشرة للوضع الميداني والتوترات المستمرة بين الأطراف المعنية.</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('غزة والضفة الغربية: اتهامات للاحتلال الإسرائيلي بعرقلة المساعدات الإنسانية')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+
+  <div class="article politics">
+    <h3>السودان: تطورات متعلقة بقادة مثل حميدتي والبرهان في سياق التوترات السياسية</h3>
+    <p>تشهد السودان توترات سياسية متصاعدة، مع تطورات حول قادة مثل <strong>حميدتي</strong> و<strong>البرهان</strong>، وسط تحركات سياسية وميدانية تؤثر على الاستقرار والأوضاع الأمنية في البلاد.</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('السودان: تطورات متعلقة بقادة مثل حميدتي والبرهان في سياق التوترات السياسية')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+
+  <!-- الاقتصاد -->
+  <div class="article economy">
+    <h3>ارتفاع أسعار النفط وتأثيرها على الاقتصاد العالمي</h3>
+    <p>شهدت أسعار النفط ارتفاعًا ملحوظًا، مما أثّر على مؤشرات الاقتصاد العالمي وأسواق المال.</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('ارتفاع أسعار النفط وتأثيرها على الاقتصاد العالمي')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+
+  <!-- التكنولوجيا -->
+  <div class="article tech">
+    <h3>تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في نماذج الذكاء الاصطناعي</h3>
+    <p>أعلنت شركة <strong>xAI</strong> عن إطلاق تحديثات متقدمة في نماذج الذكاء الاصطناعي، مع تركيز خاص على دعم التطبيقات العربية وتحسين دقة الفهم اللغوي والسياقي، وفتح آفاق جديدة لاستخدام الذكاء الاصطناعي في التعليم والإعلام والخدمات الرقمية.</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في نماذج الذكاء الاصطناعي')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+
+  <!-- الرياضة -->
+  <div class="article sports">
+    <h3>كرة القدم: فوز المنتخب السعودي في تصفيات كأس العالم</h3>
+    <p>حقق المنتخب السعودي فوزًا ثمينًا في تصفيات كأس العالم، مع إصابات مؤثرة في الدوري الإنجليزي الممتاز قد تؤثر على نتائج الأندية في الجولات القادمة.</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('كرة القدم: فوز المنتخب السعودي في تصفيات كأس العالم')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+
+  <!-- الطقس -->
+  <div class="article weather">
+    <h3>السعودية - الطقس: سحب رعدية ممطرة ورياح نشطة في جازان، عسير، وتبوك</h3>
+    <p>تشهد مناطق <strong>جازان</strong>، <strong>عسير</strong>، و<strong>تبوك</strong> نشاطًا للسحب الرعدية الممطرة المصحوبة برياح نشطة، فيما تسجل منطقتا <strong>مكة المكرمة</strong> و<strong>المدينة المنورة</strong> رياحًا مثيرة للأتربة والغبار تقلل من مدى الرؤية الأفقية. كما يُتوقع تشكل <strong>ضباب صباحي</strong> على بعض محافظات المنطقة الشرقية.</p>
+    <div class="meta-row">
+      <div class="date">🗓️ 2 نوفمبر 2025</div>
+      <button class="share-btn" onclick="shareArticle('السعودية - الطقس: سحب رعدية ممطرة ورياح نشطة في جازان، عسير، وتبوك')">
+        <i class="fi fi-ss-share"></i> مشاركة
+      </button>
+    </div>
+  </div>
+  </main>
