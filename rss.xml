@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>General News</title>
+    <link>https://generalnew36-ai.github.io/General-news-/</link>
+    <description>أخبار عربية وعالمية في السياسة، الاقتصاد، الرياضة، التكنولوجيا، والصحة.</description>
+    <language>ar</language>
+    <lastBuildDate>Sat, 02 Nov 2025 15:00:00 +0000</lastBuildDate>
+    <atom:link href="https://generalnew36-ai.github.io/General-news-/rss.xml" rel="self" type="application/rss+xml" />
+
+    <!-- مقال 1 -->
+    <item>
+      <title>غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس</title>
+      <link>https://generalnew36-ai.github.io/General-news-/article1.html</link>
+      <guid isPermaLink="true">https://generalnew36-ai.github.io/General-news-/article1.html</guid>
+      <pubDate>Sat, 02 Nov 2025 15:00:00 +0000</pubDate>
+      <description>تواصل العمليات الإسرائيلية في خان يونس، مع رفع الأنقاض والبحث عن جثث الرهائن. أفادت تقارير بتوترات مستمرة في المنطقة.</description>
+      <media:content url="https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" medium="image" />
+    </item>
+
+    <!-- مقال 2 -->
+    <item>
+      <title>الجزائر تدين هجوماً على الدوحة</title>
+      <link>https://generalnew36-ai.github.io/General-news-/article2.html</link>
+      <guid isPermaLink="true">https://generalnew36-ai.github.io/General-news-/article2.html</guid>
+      <pubDate>Sat, 02 Nov 2025 15:30:00 +0000</pubDate>
+      <description>أدانت الجزائر "العدوان الصهيوني" على العاصمة القطرية، معربة عن تضامن كامل مع قطر.</description>
+      <media:content url="https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" medium="image" />
+    </item>
+
+    <!-- مقال 3 -->
+    <item>
+      <title>تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في نماذج الذكاء الاصطناعي</title>
+      <link>https://generalnew36-ai.github.io/General-news-/article3.html</link>
+      <guid isPermaLink="true">https://generalnew36-ai.github.io/General-news-/article3.html</guid>
+      <pubDate>Sat, 02 Nov 2025 16:00:00 +0000</pubDate>
+      <description>أعلنت شركة xAI عن إطلاق تحديثات متقدمة في نماذج الذكاء الاصطناعي، مع تركيز خاص على دعم التطبيقات العربية.</description>
+      <media:content url="https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" medium="image" />
+    </item>
+
+    <!-- أضف مقالات جديدة بنفس الطريقة -->
+    
+  </channel>
+</rss>
