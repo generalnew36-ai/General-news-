@@ -1,60 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- الصفحة الرئيسية -->
+  <!-- الصفحة الرئيسية التي تحتوي على كل الأقسام -->
   <url>
-    <loc>https://generalnew36-ai.github.io/General-news-/</loc>
+    <loc>https://generalnew36-ai.github.io/General-news/</loc>
     <lastmod>2025-11-02</lastmod>
-    <changefreq>daily</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- السياسة -->
-  <url>
-    <loc>https://generalnew36-ai.github.io/General-news-/politics.html</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- الاقتصاد -->
-  <url>
-    <loc>https://generalnew36-ai.github.io/General-news-/economy.html</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- التكنولوجيا -->
-  <url>
-    <loc>https://generalnew36-ai.github.io/General-news-/technology.html</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- الرياضة -->
-  <url>
-    <loc>https://generalnew36-ai.github.io/General-news-/sports.html</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- العلوم -->
-  <url>
-    <loc>https://generalnew36-ai.github.io/General-news-/science.html</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- الترفيه -->
-  <url>
-    <loc>https://generalnew36-ai.github.io/General-news-/entertainment.html</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
   </url>
 
 </urlset>
