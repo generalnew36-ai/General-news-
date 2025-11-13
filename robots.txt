@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://generalnew36-ai.github.io/General-news-/sitemap.xml
