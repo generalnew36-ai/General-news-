@@ -1,329 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>General News</title>
-
-<!-- SEO & Google Verification -->
-<meta name="google-site-verification" content="CLoN0oOrqyJJaULFrxI_0uoR0izIiOYzh_tkm6yGeB8" />
-<meta name="description" content="General News - موقع إخباري عربي يقدم تغطية شاملة لأهم الأخبار السياسية، الاقتصادية، الرياضية، الصحية والتكنولوجية.">
-<meta name="keywords" content="أخبار, سياسة, اقتصاد, رياضة, صحة, تكنولوجيا, الشرق الأوسط, العالم">
-<meta name="robots" content="index, follow">
-<meta name="author" content="General News">
-
-<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
-
-<style>
-body {
-  font-family: "Tahoma", sans-serif;
-  background-color: #000;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  background-color: #111;
-  z-index: 1000;
-}
-.logo-wrapper {
-  display: inline-block;
-  padding: 5px;
-  border: 3px solid #00bfff;
-  border-radius: 15px;
-  animation: colorBorder 5s infinite;
-  transition: transform 0.3s, box-shadow 0.3s;
-  background-color: #000;
-}
-.logo-wrapper img { width: 300px; height: 50px; display: block; }
-.logo-wrapper:hover { transform: scale(1.05); box-shadow: 0 0 15px #00bfff; }
-@keyframes colorBorder {
-  0%,33%,66%{ border-color:#000; } 100% { border-color:#CB1229; }
-}
-header hr { width:100%; border:1px solid #333; margin:10px 0; }
-.nav-container {
-  position: sticky;
-  top:0;
-  z-index:999;
-  background-color: rgba(17,17,17,0.95);
-  backdrop-filter: blur(6px);
-  border:3px solid #666565;
-  border-radius:15px;
-  padding:8px 10px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  overflow-x:auto;
-}
-.nav-container::-webkit-scrollbar { display:none; }
-.nav-item {
-  background-color:#222;
-  color:#fff;
-  border:none;
-  padding:8px 16px;
-  font-size:15px;
-  border-radius:10px;
-  cursor:pointer;
-  transition:0.3s;
-  flex-shrink:0;
-}
-.nav-item.active { background-color:#56565A; color:#000; }
-.nav-item:hover { background-color:#1B5DDA; transform:scale(1.05); }
-.social-icon-frame {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:40px;height:40px;
-  margin:0 5px;
-  border:3px solid #205CFF;
-  border-radius:50%;
-  background-color:#000;
-  cursor:pointer;
-  transition:0.3s;
-  flex-shrink:0;
-}
-.social-icon-frame img { width:18px;height:18px; }
-.social-icon-frame:hover { transform:scale(1.2); box-shadow:0 0 10px #000; border-color:#000; }
-main {
-  flex:1;
-  padding:10px;
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(350px,1fr));
-  gap:15px;
-}
-.article {
-  background-color:#111;
-  border-radius:10px;
-  padding:15px;
-  box-shadow:0 0 10px #222;
-  display:block;
-}
-.article h3 { color:#1241C1; margin:10px 0 5px; font-size:18px; }
-.article p { font-size:14px; line-height:1.6; color:#ccc; }
-.meta-row { display:flex; justify-content:space-between; align-items:center; margin-top:10px; }
-.date { font-size:12px; color:#aaa; }
-.share-btn {
-  background-color:#222;
-  border:none;
-  color:#978F8F;
-  display:flex;
-  align-items:center;
-  gap:5px;
-  border-radius:10px;
-  padding:5px 10px;
-  cursor:pointer;
-  font-size:14px;
-  transition:0.3s;
-}
-.share-btn:hover { background-color:#333; }
-.ad-frame { margin-top:10px; text-align:center; border:1px solid red; border-radius:10px; padding:5px; }
-</style>
-</head>
-
-<body>
-<header>
-  <div class="logo-wrapper">
-    <img src="https://i.postimg.cc/rytfmbtk/Screenshot-20251101-212401-2.jpg" alt="شعار الموقع">
-  </div>
-  <hr>
-</header>
-
-<div class="nav-container">
-  <!-- أقسام الموقع -->
-  <button class="nav-item active" onclick="filterCategory('all', this)">الكل</button>
-  <button class="nav-item" onclick="filterCategory('politics', this)">السياسة</button>
-  <button class="nav-item" onclick="filterCategory('economy', this)">الاقتصاد</button>
-  <button class="nav-item" onclick="filterCategory('tech', this)">التكنولوجيا</button>
-  <button class="nav-item" onclick="filterCategory('sports', this)">الرياضة</button>
-  <button class="nav-item" onclick="filterCategory('health', this)">الصحة</button>
-  <button class="nav-item" onclick="filterCategory('science', this)">العلوم</button>
-  <button class="nav-item" onclick="filterCategory('entertainment', this)">الترفيه</button>
-
-  <!-- أزرار التواصل الاجتماعي -->
-  <a href="https://facebook.com" target="_blank" class="social-icon-frame"><img src="https://i.postimg.cc/tTmWSDkN/Screenshot-20251031-211935-4.jpg" alt="Facebook"></a>
-  <a href="https://twitter.com" target="_blank" class="social-icon-frame"><img src="https://i.postimg.cc/X7DFn26k/Screenshot-20251031-202646-2.jpg" alt="Twitter"></a>
-  <a href="https://youtube.com" target="_blank" class="social-icon-frame"><img src="https://i.postimg.cc/1z78sXFs/Screenshot-20251031-211935-3.jpg" alt="YouTube"></a>
-  <a href="https://instagram.com" target="_blank" class="social-icon-frame"><img src="https://i.postimg.cc/8CG8Kgz8/Screenshot-20251031-211935-5.jpg" alt="Instagram"></a>
-  <a href="https://t.me" target="_blank" class="social-icon-frame"><img src="https://i.postimg.cc/567RNTLP/Screenshot-20251031-211935-6.jpg" alt="Telegram"></a>
-</div>
-
-<main id="content">
-  <!-- مثال لمقالات -->
-  <div class="article politics">
-    <h3>غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس</h3>
-    <p>تواصل العمليات الإسرائيلية في خان يونس، مع رفع الأنقاض والبحث عن جثث الرهائن...</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-
-  <div class="article economy">
-    <h3>ارتفاع أسعار النفط وتأثيرها على الاقتصاد العالمي</h3>
-    <p>شهدت أسعار النفط ارتفاعًا ملحوظًا، مما أثّر على مؤشرات الاقتصاد العالمي وأسواق المال...</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('ارتفاع أسعار النفط وتأثيرها على الاقتصاد العالمي')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-
-  <div class="article tech">
-    <h3>تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في الذكاء الاصطناعي</h3>
-    <p>أعلنت شركة xAI عن تحديثات متقدمة في نماذج الذكاء الاصطناعي...</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في الذكاء الاصطناعي')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-
-  <div class="article sports">
-    <h3>كرة القدم: فوز المنتخب السعودي في تصفيات كأس العالم</h3>
-    <p>حقق المنتخب السعودي فوزًا ثمينًا في تصفيات كأس العالم...</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('كرة القدم: فوز المنتخب السعودي في تصفيات كأس العالم')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-</main>
-
-<script>
-function filterCategory(category, btn) {
-  document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  const articles = document.querySelectorAll('.article');
-  articles.forEach(a => {
-    if(category === 'all') a.style.display='block';
-    else a.style.display = a.classList.contains(category) ? 'block' : 'none';
-  });
-}
-
-function shareArticle(title) {
-  if(navigator.share){
-    navigator.share({title,text:title,url:window.location.href});
-  } else { alert('نسخ الرابط لمشاركته: ' + window.location.href); }
-}
-</script>
-</body>
-</html><main id="content">
-  <!-- السياسة -->
-  <div class="article politics">
-    <h3>غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس</h3>
-    <p>تواصل العمليات الإسرائيلية في خان يونس، مع رفع الأنقاض والبحث عن جثث الرهائن. 
-    أفادت تقارير بتوترات مستمرة في المنطقة، وسط دعوات دولية لوقف إطلاق النار.</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('غزة وإسرائيل: تواصل العمليات الإسرائيلية في خان يونس')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-
-  <div class="article politics">
-    <h3>الجزائر تدين هجوماً على الدوحة</h3>
-    <p>أدانت الجزائر "العدوان الصهيوني" على العاصمة القطرية، معبرة عن تضامن كامل مع قطر. 
-    الرئيس تبون استقبل أيضاً وزير الداخلية الإسباني لمناقشة التعاون الأمني.</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('الجزائر تدين هجوماً على الدوحة')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-
-  <div class="article politics">
-    <h3>الانتخابات الأمريكية</h3>
-    <p>يتصدر التركيز الانتخابات الرئاسية القادمة، مع استطلاعات تشير إلى تنافس شديد بين المرشحين الرئيسيين. 
-    تغطية واسعة للتأثيرات على الشرق الأوسط.</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('الانتخابات الأمريكية')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-
-  <div class="article politics">
-    <h3>غزة والضفة الغربية: اتهامات للاحتلال الإسرائيلي بعرقلة المساعدات الإنسانية</h3>
-    <p>تواجه غزة والضفة الغربية عمليات اقتحام مستمرة من الاحتلال الإسرائيلي، مع عرقلة المساعدات الإنسانية، وسط تغطية مباشرة للوضع الميداني والتوترات المستمرة بين الأطراف المعنية.</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('غزة والضفة الغربية: اتهامات للاحتلال الإسرائيلي بعرقلة المساعدات الإنسانية')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-
-  <div class="article politics">
-    <h3>السودان: تطورات متعلقة بقادة مثل حميدتي والبرهان في سياق التوترات السياسية</h3>
-    <p>تشهد السودان توترات سياسية متصاعدة، مع تطورات حول قادة مثل <strong>حميدتي</strong> و<strong>البرهان</strong>، وسط تحركات سياسية وميدانية تؤثر على الاستقرار والأوضاع الأمنية في البلاد.</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('السودان: تطورات متعلقة بقادة مثل حميدتي والبرهان في سياق التوترات السياسية')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-
-  <!-- الاقتصاد -->
-  <div class="article economy">
-    <h3>ارتفاع أسعار النفط وتأثيرها على الاقتصاد العالمي</h3>
-    <p>شهدت أسعار النفط ارتفاعًا ملحوظًا، مما أثّر على مؤشرات الاقتصاد العالمي وأسواق المال.</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('ارتفاع أسعار النفط وتأثيرها على الاقتصاد العالمي')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-
-  <!-- التكنولوجيا -->
-  <div class="article tech">
-    <h3>تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في نماذج الذكاء الاصطناعي</h3>
-    <p>أعلنت شركة <strong>xAI</strong> عن إطلاق تحديثات متقدمة في نماذج الذكاء الاصطناعي، مع تركيز خاص على دعم التطبيقات العربية وتحسين دقة الفهم اللغوي والسياقي، وفتح آفاق جديدة لاستخدام الذكاء الاصطناعي في التعليم والإعلام والخدمات الرقمية.</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('تكنولوجيا: إطلاق شركة xAI لتحديثات جديدة في نماذج الذكاء الاصطناعي')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-
-  <!-- الرياضة -->
-  <div class="article sports">
-    <h3>كرة القدم: فوز المنتخب السعودي في تصفيات كأس العالم</h3>
-    <p>حقق المنتخب السعودي فوزًا ثمينًا في تصفيات كأس العالم، مع إصابات مؤثرة في الدوري الإنجليزي الممتاز قد تؤثر على نتائج الأندية في الجولات القادمة.</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('كرة القدم: فوز المنتخب السعودي في تصفيات كأس العالم')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-
-  <!-- الطقس -->
-  <div class="article weather">
-    <h3>السعودية - الطقس: سحب رعدية ممطرة ورياح نشطة في جازان، عسير، وتبوك</h3>
-    <p>تشهد مناطق <strong>جازان</strong>، <strong>عسير</strong>، و<strong>تبوك</strong> نشاطًا للسحب الرعدية الممطرة المصحوبة برياح نشطة، فيما تسجل منطقتا <strong>مكة المكرمة</strong> و<strong>المدينة المنورة</strong> رياحًا مثيرة للأتربة والغبار تقلل من مدى الرؤية الأفقية. كما يُتوقع تشكل <strong>ضباب صباحي</strong> على بعض محافظات المنطقة الشرقية.</p>
-    <div class="meta-row">
-      <div class="date">🗓️ 2 نوفمبر 2025</div>
-      <button class="share-btn" onclick="shareArticle('السعودية - الطقس: سحب رعدية ممطرة ورياح نشطة في جازان، عسير، وتبوك')">
-        <i class="fi fi-ss-share"></i> مشاركة
-      </button>
-    </div>
-  </div>
-  </main>
