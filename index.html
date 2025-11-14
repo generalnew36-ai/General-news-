@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>First News — الصفحة الرئيسية</title>
 
+<!-- Google Site Verification -->
+<meta name="google-site-verification" content="J6fSD3uxJ7CSpeCTFGPocMqsrknfRAytVIyFnXV1Pnw" />
+
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8VR8WRQXV5"></script>
 <script>
@@ -53,6 +56,7 @@ main{max-width:1100px;margin:10px auto;display:grid;gap:18px;}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
 .news h2{margin:6px 0 8px;font-size:18px;}
 .news p{margin:0 0 8px;color:var(--muted);line-height:1.5;}
+.share-container{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
 .share-btn{display:flex;align-items:center;gap:4px;padding:6px 10px;border:none;border-radius:8px;background:rgba(37,99,235,0.12);color:var(--accent);cursor:pointer;font-weight:600;}
 .share-btn svg{width:18px;height:18px;}
 footer{text-align:center;color:var(--muted);padding:14px;}
@@ -126,15 +130,26 @@ async function loadRSS(){
     items.forEach(it=>{
       const card=document.createElement('article');
       card.className='card news';
+
+      const title = read(it,'title');
+      const description = read(it,'description');
+      const link = read(it,'link') || window.location.href;
+      const encodedTitle = encodeURIComponent(title);
+      const encodedDescription = encodeURIComponent(description);
+      const encodedLink = encodeURIComponent(link);
+
       card.innerHTML=`
         ${img(it)?`<img src="${img(it)}" class="thumb">`:''}
         <div class="meta"><span class="category">${it.querySelector('category')?.textContent||'عام'}</span><span>${new Date(read(it,'pubDate')).toLocaleString('ar-EG')}</span></div>
-        <h2>${read(it,'title')}</h2>
-        <p>${read(it,'description')}</p>
-        <button class="share-btn" onclick="alert('شارك هذا المقال!')">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M16 6l-4-4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          مشاركة
-        </button>`;
+        <h2>${title}</h2>
+        <p>${description}</p>
+        <div class="share-container">
+          <button class="share-btn" onclick="window.open('https://api.whatsapp.com/send?text=${encodedTitle}%0A${encodedLink}','_blank')">WhatsApp</button>
+          <button class="share-btn" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=${encodedLink}','_blank')">Facebook</button>
+          <button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedLink}','_blank')">Twitter</button>
+          <button class="share-btn" onclick="window.open('https://t.me/share/url?url=${encodedLink}&text=${encodedTitle}','_blank')">Telegram</button>
+          <button class="share-btn" onclick="navigator.clipboard.writeText('${link}').then(()=>alert('تم نسخ الرابط'))">نسخ الرابط</button>
+        </div>`;
       container.appendChild(card);
     });
   }catch(e){
