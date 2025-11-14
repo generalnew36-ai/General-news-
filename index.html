@@ -95,25 +95,24 @@ footer{text-align:center;color:var(--muted);padding:14px;}
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
 
+// الوضع الداكن
 const toggle=document.getElementById('dark-toggle');
 const iconSun=document.getElementById('icon-sun');
 const iconMoon=document.getElementById('icon-moon');
-
 function applyTheme(isDark){
   if(isDark){document.documentElement.classList.add('dark');iconSun.style.display='none';iconMoon.style.display='block';}
   else{document.documentElement.classList.remove('dark');iconSun.style.display='block';iconMoon.style.display='none';}
 }
-
 const saved=localStorage.getItem('site-theme');
 if(saved){applyTheme(saved==='dark');}
 else{applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);}
-
 toggle.addEventListener('click',()=>{
   const isDark=document.documentElement.classList.toggle('dark');
   localStorage.setItem('site-theme',isDark?'dark':'light');
   applyTheme(isDark);
 });
 
+// تحميل الأخبار وعرضها
 async function loadRSS(){
   try{
     const res=await fetch('rss.xml',{cache:'no-store'});
@@ -133,10 +132,11 @@ async function loadRSS(){
 
       const title = read(it,'title');
       const description = read(it,'description');
-      const link = read(it,'link') || window.location.href;
+      
+      // الرابط الثابت للمشاركة
+      const shareUrl = "https://generalnew36-ai.github.io/General-news-/";
       const encodedTitle = encodeURIComponent(title);
-      const encodedDescription = encodeURIComponent(description);
-      const encodedLink = encodeURIComponent(link);
+      const encodedShareUrl = encodeURIComponent(shareUrl);
 
       card.innerHTML=`
         ${img(it)?`<img src="${img(it)}" class="thumb">`:''}
@@ -144,11 +144,11 @@ async function loadRSS(){
         <h2>${title}</h2>
         <p>${description}</p>
         <div class="share-container">
-          <button class="share-btn" onclick="window.open('https://api.whatsapp.com/send?text=${encodedTitle}%0A${encodedLink}','_blank')">WhatsApp</button>
-          <button class="share-btn" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=${encodedLink}','_blank')">Facebook</button>
-          <button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedLink}','_blank')">Twitter</button>
-          <button class="share-btn" onclick="window.open('https://t.me/share/url?url=${encodedLink}&text=${encodedTitle}','_blank')">Telegram</button>
-          <button class="share-btn" onclick="navigator.clipboard.writeText('${link}').then(()=>alert('تم نسخ الرابط'))">نسخ الرابط</button>
+          <button class="share-btn" onclick="window.open('https://api.whatsapp.com/send?text=${encodedTitle}%0A${encodedShareUrl}','_blank')">WhatsApp</button>
+          <button class="share-btn" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}','_blank')">Facebook</button>
+          <button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedShareUrl}','_blank')">Twitter</button>
+          <button class="share-btn" onclick="window.open('https://t.me/share/url?url=${encodedShareUrl}&text=${encodedTitle}','_blank')">Telegram</button>
+          <button class="share-btn" onclick="navigator.clipboard.writeText('${shareUrl}').then(()=>alert('✔️ تم نسخ الرابط'))">نسخ الرابط</button>
         </div>`;
       container.appendChild(card);
     });
